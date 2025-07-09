@@ -7,15 +7,15 @@ library(httr)
 #  Carga de archivo local de desempleo
 desempleo <- read_csv("data/raw/desempleo_mexico.csv")
 
-# Descargar archivo de criminalidad desde URL directa (UCI)
+# Descarga el archivo de criminalidad desde URL 
 url_crimen <- "https://archive.ics.uci.edu/ml/machine-learning-databases/communities/communities.data"
 download.file(url_crimen, destfile = "data/raw/crimen_uci.csv", mode = "wb")
 
-# Leer el archivo descargado
+# Lee el archivo descargado
 # Este dataset no tiene encabezados, por eso usamos col_names = FALSE
 crimen1 <- read_csv("data/raw/crimen_uci.csv", col_names = FALSE)
 
-# Ver resumen de los datos
+# Ve resumen de los datos
 cat("\nResumen del archivo de desempleo:\n")
 print(summary(desempleo))
 
