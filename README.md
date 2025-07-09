@@ -1,33 +1,44 @@
+# Datos Utilizados
+
+Este proyecto utiliza dos fuentes de datos principales, detalladas a continuación.
+
+## Resumen de Datasets
+
+| # | Nombre                            | Fuente                              | Formato | Filas/Columnas | Descripción breve                                           |
+|---|-----------------------------------|-------------------------------------|---------|----------------|-------------------------------------------------------------|
+| 1 | Tasa de Desempleo en México       | INEGI                               | CSV     | Mensual/Entidad | Tasa de desempleo por entidad federativa en México         |
+| 2 | Criminalidad por Comunidad en EE.UU. | UCI Machine Learning Repository      | CSV     | ~1900 filas / 128 columnas | Indicadores sociales y criminales por comunidad en EE.UU.   |
 
 ---
 
-##  Datos Utilizados
+## Detalles de los Datasets
 
 ### 1. **Tasa de Desempleo en México**
-- **Fuente:** INEGI (Instituto Nacional de Estadística y Geografía)
+- **Fuente:** Instituto Nacional de Estadística y Geografía (INEGI)
 - **Archivo:** `desempleo_mexico.csv`
-- **Formato:** CSV (delimitado por comas)
+- **Formato:** CSV (valores separados por comas)
 - **Ubicación:** `/data/raw/desempleo_mexico.csv`
-- **Descripción:** Contiene la tasa de desempleo mensual por entidad federativa en México.
-- **Relevancia:** Sirve como variable socioeconómica base para evaluar posibles correlaciones con niveles de criminalidad.
+- **Descripción:** Registra la tasa de desempleo mensual por entidad federativa en México.
+- **Relevancia:** Variable socioeconómica clave para analizar posibles correlaciones con los niveles de criminalidad en el país.
 
 ---
 
 ### 2. **Criminalidad por Comunidad en EE.UU.**
 - **Fuente:** UCI Machine Learning Repository  
-  (University of California, Irvine)
-- **URL directa:**  
+  (University of California, Irvine)  
+- **Enlace directo:**  
   [https://archive.ics.uci.edu/ml/machine-learning-databases/communities/communities.data](https://archive.ics.uci.edu/ml/machine-learning-databases/communities/communities.data)
-- **Archivo guardado como:** `crimen_uci.csv`
+- **Archivo local:** `crimen_uci.csv`
 - **Ubicación:** `/data/raw/crimen_uci.csv`
 - **Formato:** CSV (sin encabezados, 128 columnas)
-- **Descripción:** Incluye indicadores sociales, económicos, educativos y de criminalidad para más de 1,900 comunidades en EE.UU.
-- **Relevancia:** Permite analizar cómo diversos factores sociales se relacionan con los índices de criminalidad.
+- **Descripción:** Conjunto de datos con más de 1,900 comunidades de EE.UU., incluyendo indicadores sociales, económicos, educativos y delictivos.
+- **Relevancia:** Permite estudiar la relación entre factores estructurales y los niveles de criminalidad a nivel comunitario.
 
 ---
 
-##  Script de Importación
+## Script de Importación
 
-El script de carga de datos se encuentra en:
-/scripts/import.R
+El código para la carga de estos datos está disponible en:  
+`/scripts/import.R`
+
 
